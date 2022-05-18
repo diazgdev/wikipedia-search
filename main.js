@@ -10,6 +10,12 @@ async function handleSubmit(event) {
   // remove whitespaces in the search query
   let searchQuery = inputValue.trim();
 
+  let searchResults = document.querySelector('.results');
+  searchResults.innerHTML = "";
+
+  let spinner = document.querySelector('.spinner');
+  spinner.classList.remove('hidden');
+
   try {
     let results = await searchWikipedia(searchQuery);
     console.log(results);
@@ -17,6 +23,8 @@ async function handleSubmit(event) {
   } catch (error) {
     console.log(error);
     alert('Failed to search in Wikipedia');
+  } finally {
+    spinner.classList.add('hidden');
   }
 }
 

@@ -43,9 +43,9 @@ function displayResults(results) {
           <h3 class="result-title">
             <a href="${url}" target="_blank" rel="noopener">${result.title}</a>
           </h3>
-          <a href="${url}" class="result-link" target="_blank" rel="noopener">
-          <span class="result-snippet">${result.snippet}</span><br>
-          </div>`
+          <a href="${url}" class="result-link" target="_blank" rel="noopener">${url}</a>
+          <p class="result-snippet">${result.snippet}</p>
+        </div>`
      );
   });
 }

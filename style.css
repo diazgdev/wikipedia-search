@@ -29,7 +29,7 @@ main {
 }
 
 .results {
-  width: 350px;
+  max-width: 350px;
   padding: 30px;
 }
 
